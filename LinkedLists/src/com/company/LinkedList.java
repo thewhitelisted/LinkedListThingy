@@ -1,10 +1,13 @@
 package com.company;
 
 public class LinkedList {
+    // constructor and variables and shit
     Node nodes;
     public LinkedList(Node nodes) {
         this.nodes = nodes;
     }
+    
+    // these functions refer to the node functions, easier readability
     public void addValue(int val) {
         this.nodes.addNode(val);
     }

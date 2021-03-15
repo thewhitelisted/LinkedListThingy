@@ -1,11 +1,14 @@
 package com.company;
 
 public class Node {
+    // contructor and variables
     int val;
     Node next = null;
     public Node(int val) {
         this.val = val;
     }
+    
+    // appends node to end of list, need to change to append
     public void addNode(int val) {
         if (this.next == null) {
             this.next = new Node(val);
@@ -13,6 +16,7 @@ public class Node {
             addNode(val);
         }
     }
+    // prints out the values of all nodes recursively
     public void printNodes() {
         if (this.next == null) {
             System.out.print(this.val);
@@ -21,6 +25,7 @@ public class Node {
             this.next.printNodes();
         }
     }
+    // checks if value is in list
     public boolean contains(int val) {
         if (this.val == val) {
             return true;
